@@ -1,0 +1,116 @@
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML Background */
+html {
+  background: url('japan.gif') center/cover no-repeat; 
+  height: 100%;
+  font-family: 'Noto Sans JP', sans-serif; 
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%; /* Full screen height */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3); /* overlay */
+  padding: 20px;
+  gap: 20px; /* Space between elements */
+}
+
+/* Header */
+header h1, h2 {
+  background-color: rgba(244, 216, 242, 0.9); /* overlay */
+  color: #333;
+  margin-bottom: 5%;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* Content Container */
+.content-container {
+  background: rgba(244, 216, 242, 0.9); /*background */
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 90%; /* Responsive */
+  
+}
+
+/* Fortune Text */
+#fortune {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  background-color: #9c828a; 
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 15px; 
+  transition: background-color 0.3s ease; 
+}
+
+button:hover {
+  background-color: #e7c899; 
+}
+
+button:focus {
+  outline: 3px solid #9d0a6a; 
+  outline-offset: 2px;
+}
+
+/* Image Styling */
+img {
+  width: 170px;
+  height: auto; 
+  margin: 50px auto; 
+  display: block;
+}
+
+/* Shake Animation */
+@keyframes shake {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(20deg); }
+  40% { transform: rotate(-20deg); }
+  60% { transform: rotate(15deg); }
+  80% { transform: rotate(-15deg); }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .content-container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  #fortune {
+    font-size: 1.2rem; 
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  img {
+    width: 120px;
+  }
+}
